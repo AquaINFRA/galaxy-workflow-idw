@@ -1,0 +1,216 @@
+{
+    "@context": [
+      "https://w3id.org/ro/crate/1.1/context",
+      {
+        "@base": null
+      }
+    ],
+    "@graph": [
+      {
+        "@id": "ro-crate-metadata.json",
+        "@type": "CreativeWork",
+        "conformsTo": {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        "about": {
+          "@id": "./"
+        }
+      },
+      {
+        "@id": "./",
+        "@type": [
+          "Dataset",
+          "ComputationalWorkflow",
+          "SoftwareSourceCode",
+          "SoftwareApplication"
+        ],
+        "name": "A workflow demonstrating the 'Run interpolation based on IDW' tool",
+        "ComputationalWorkflow#input": [
+          {
+            "@id": "#input1"
+          },
+          {
+            "@id": "#input2"
+          }
+        ],
+        "ComputationalWorkflow#output": {
+          "@id": "#output"
+        },
+        "author": {
+          "@id": "https://orcid.org/0000-0001-6651-0976"
+        },
+        "abstract": "This repository contains a Galaxy workflow to demonstrate the functionality of the AquaINFRA Interaction Platform and Virtual Research Environment. The two input files in the repository can be used as examples to run the workflow. The workflow files also includes pre-defined settings. Other datasets will probably require changes regarding the columns for the latitude/longitude/observation values.",
+        "hasPart": [
+          {
+            "@id": "#Galaxy-Workflow-A_workflow_demonstrating_the__Run_interpolation_based_on_IDW__tool.ga"
+          },
+          {
+            "@id": "#https://doi.org/10.5281/zenodo.10477880"
+          }
+        ],
+        "license": {
+          "@id": "https://www.apache.org/licenses/LICENSE-2.0"
+        },
+        "dateCreated": "2024-01-31T23:00:00.000Z",
+        "version": "1.0",
+        "distribution": {
+          "@id": "https://files.osf.io/v1/resources/p8z4w/providers/osfstorage/?zip="
+        },
+        "funding": [
+          {
+            "@id": "#EuropeanCommission"
+          }
+        ],
+        "runtimePlatform": "Galaxy 22.05",
+        "exampleOfWork": {
+          "@id": "#https://doi.org/10.5281/zenodo.10477880"
+        },
+        "workExample": {
+          "@id": "#e16"
+        }
+      },
+      {
+        "@id": "#input1",
+        "@type": [
+          "FormalParameter",
+          "Dataset"
+        ],
+        "name": "input1",
+        "fileFormat": "text/csv",
+        "@reverse": {
+          "ComputationalWorkflow#input": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "#input2",
+        "@type": [
+          "FormalParameter",
+          "Dataset"
+        ],
+        "name": "input2",
+        "fileFormat": "application/geo+json",
+        "@reverse": {
+          "ComputationalWorkflow#input": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "#output",
+        "@type": [
+          "FormalParameter",
+          "ImageObject"
+        ],
+        "name": "output",
+        "fileFormat": "image/png",
+        "@reverse": {
+          "ComputationalWorkflow#output": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "https://orcid.org/0000-0002-8367-6908",
+        "@type": [
+          "Person",
+          "Researcher"
+        ],
+        "name": "Markus Konkol",
+        "affiliation": [
+          {
+            "@id": "https://ror.org/000tetj79"
+          },
+          {
+            "@id": "https://ror.org/01nftxb06"
+          }
+        ],
+        "@reverse": {
+          "author": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "https://ror.org/000tetj79",
+        "@type": [
+          "Organization"
+        ],
+        "name": "52°North - Initiative for Geospatial Open Source Software",
+        "@reverse": {
+          "affiliation": {
+            "@id": "https://orcid.org/0000-0002-8367-6908"
+          }
+        }
+      },
+      {
+        "@id": "https://ror.org/01nftxb06",
+        "@type": [
+          "Organization",
+          "ResearchOrganization"
+        ],
+        "name": "Leibniz Institute of Freshwater Ecology and Inland Fisheries",
+        "@reverse": {
+          "affiliation": {
+            "@id": "https://orcid.org/0000-0002-8367-6908"
+          }
+        }
+      },
+      {
+        "@id": "#Galaxy-Workflow-A_workflow_demonstrating_the__Run_interpolation_based_on_IDW__tool.ga",
+        "@type": [
+          "File",
+          "CreativeWork",
+          "ComputationalWorkflow"
+        ],
+        "name": "Galaxy-Workflow-A_workflow_demonstrating_the__Run_interpolation_based_on_IDW__tool.ga",
+        "contentSize": 6.8203125,
+        "encodingFormat": "text/plain",
+        "sha256": "d4d8ce07e232369e84926ee8d4651edc508fe5efd514ed463a524ee47e4495ab",
+        "@reverse": {
+          "hasPart": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "https://www.apache.org/licenses/LICENSE-2.0",
+        "@type": [
+          "URL"
+        ],
+        "name": "https://www.apache.org/licenses/LICENSE-2.0",
+        "@reverse": {
+          "license": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "#EuropeanCommission",
+        "@type": [
+          "Grant"
+        ],
+        "name": "European Commission",
+        "description": "This project has received funding from the European Commission’s Horizon Europe Research and Innovation programme under grant agreement No 101094434.",
+        "@reverse": {
+          "funding": {
+            "@id": "./"
+          }
+        }
+      },
+      {
+        "@id": "#https://doi.org/10.5281/zenodo.10477880",
+        "@type": [
+          "CreativeWork",
+          "SoftwareSourceCode"
+        ],
+        "name": "https://doi.org/10.5281/zenodo.10477880",
+        "@reverse": {
+          "exampleOfWork": {
+            "@id": "./"
+          }
+        }
+      }
+    ]
+  }
